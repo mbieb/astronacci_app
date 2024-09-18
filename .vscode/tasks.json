@@ -1,0 +1,37 @@
+{
+    "version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Android : Build astronacci apk Release",
+			"type": "shell",
+			"command": "flutter",
+			"args": [
+				"build",
+                "apk",
+				"--release",
+			],
+			"group": "build"
+		},
+		{
+			"label": "Android : Build astronacci apk split per abi",
+			"type": "shell",
+			"command": "flutter",
+			"args": [
+				"build",
+                "apk",
+				"--split-per-abi",
+			],
+			"group": "build"
+		},
+        {
+			"label": "Android : Build astronacci appbundle",
+			"type": "shell",
+			"command": "flutter",
+			"args": [
+				"build",
+                "appbundle",
+			],
+			"group": "build"
+		},
+	],
+}
