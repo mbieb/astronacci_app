@@ -8,6 +8,7 @@
     "alertOk": "Ok",
     "alertLogin": "Register Success, Enjoy to use this app.",
     "alertSuccess": "Success",
+    "alertSuccessUpdateProfile": "Success update Profile",
     "alertLogout": "Are you sure you want to log out?",
     "alertQuit": "Are you sure you want to quit the app?",
     "birthDate": "Birth Date",

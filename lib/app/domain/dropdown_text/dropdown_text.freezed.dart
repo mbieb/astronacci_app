@@ -19,9 +19,7 @@ mixin _$DropdownText {
   String get id => throw _privateConstructorUsedError;
   String get text => throw _privateConstructorUsedError;
 
-  /// Create a copy of DropdownText
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $DropdownTextCopyWith<DropdownText> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -45,8 +43,6 @@ class _$DropdownTextCopyWithImpl<$Res, $Val extends DropdownText>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of DropdownText
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,8 +81,6 @@ class __$$DropdownTextImplCopyWithImpl<$Res>
       _$DropdownTextImpl _value, $Res Function(_$DropdownTextImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of DropdownText
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -133,9 +127,7 @@ class _$DropdownTextImpl implements _DropdownText {
   @override
   int get hashCode => Object.hash(runtimeType, id, text);
 
-  /// Create a copy of DropdownText
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DropdownTextImplCopyWith<_$DropdownTextImpl> get copyWith =>
@@ -151,11 +143,8 @@ abstract class _DropdownText implements DropdownText {
   String get id;
   @override
   String get text;
-
-  /// Create a copy of DropdownText
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DropdownTextImplCopyWith<_$DropdownTextImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -29,7 +29,8 @@ AppFailure<T> appExceptionToFailure<T>(
 
 AppFailure<T> dynamicErrorToFailure<T>(dynamic e, StackTrace stack) {
   if (e is AppException) return appExceptionToFailure(e, stack);
-  return appExceptionToFailure(AppException(e.toString(), stack), stack);
+  return appExceptionToFailure(
+      AppException(e.message ?? e.toString(), stack), stack);
 }
 
 class AppException implements Exception {
@@ -38,7 +39,7 @@ class AppException implements Exception {
   late String id;
 
   AppException(String err, this.stackTrace) : id = _generateRandomString(6) {
-    error = '$err (errno:$id)';
+    error = err;
   }
 
   String get errorWithStackTrace {
@@ -64,7 +65,7 @@ class ApiException extends AppException {
 
   @override
   String get error {
-    return '''Api Exception (errno:$id):
+    return '''Api Exception:
 
 Code :${response.statusCode}
 Message :${response.statusMessage}

@@ -140,6 +140,16 @@ class I10n {
     );
   }
 
+  /// `Success update Profile`
+  String get alertSuccessUpdateProfile {
+    return Intl.message(
+      'Success update Profile',
+      name: 'alertSuccessUpdateProfile',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Are you sure you want to log out?`
   String get alertLogout {
     return Intl.message(

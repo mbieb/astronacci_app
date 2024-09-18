@@ -35,6 +35,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alertQuit": MessageLookupByLibrary.simpleMessage(
             "Are you sure you want to quit the app?"),
         "alertSuccess": MessageLookupByLibrary.simpleMessage("Success"),
+        "alertSuccessUpdateProfile":
+            MessageLookupByLibrary.simpleMessage("Success update Profile"),
         "alertTimeOut":
             MessageLookupByLibrary.simpleMessage("Request time out"),
         "alertWarning": MessageLookupByLibrary.simpleMessage("Warning"),

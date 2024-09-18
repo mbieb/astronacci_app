@@ -24,9 +24,7 @@ mixin _$RegisterForm {
   Option<DateTime> get birthDate => throw _privateConstructorUsedError;
   Option<String> get imageUrl => throw _privateConstructorUsedError;
 
-  /// Create a copy of RegisterForm
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $RegisterFormCopyWith<RegisterForm> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,8 +55,6 @@ class _$RegisterFormCopyWithImpl<$Res, $Val extends RegisterForm>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of RegisterForm
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -129,8 +125,6 @@ class __$$RegisterFormImplCopyWithImpl<$Res>
       _$RegisterFormImpl _value, $Res Function(_$RegisterFormImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of RegisterForm
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -231,9 +225,7 @@ class _$RegisterFormImpl extends _RegisterForm {
   int get hashCode => Object.hash(runtimeType, fullName, password, email,
       gender, province, birthDate, imageUrl);
 
-  /// Create a copy of RegisterForm
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$RegisterFormImplCopyWith<_$RegisterFormImpl> get copyWith =>
@@ -265,11 +257,8 @@ abstract class _RegisterForm extends RegisterForm {
   Option<DateTime> get birthDate;
   @override
   Option<String> get imageUrl;
-
-  /// Create a copy of RegisterForm
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$RegisterFormImplCopyWith<_$RegisterFormImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -279,9 +268,7 @@ mixin _$SignInForm {
   SignInPassword get password => throw _privateConstructorUsedError;
   EmailAddress get email => throw _privateConstructorUsedError;
 
-  /// Create a copy of SignInForm
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $SignInFormCopyWith<SignInForm> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -305,8 +292,6 @@ class _$SignInFormCopyWithImpl<$Res, $Val extends SignInForm>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of SignInForm
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -345,8 +330,6 @@ class __$$SignInFormImplCopyWithImpl<$Res>
       _$SignInFormImpl _value, $Res Function(_$SignInFormImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of SignInForm
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -395,9 +378,7 @@ class _$SignInFormImpl extends _SignInForm {
   @override
   int get hashCode => Object.hash(runtimeType, password, email);
 
-  /// Create a copy of SignInForm
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SignInFormImplCopyWith<_$SignInFormImpl> get copyWith =>
@@ -414,11 +395,8 @@ abstract class _SignInForm extends SignInForm {
   SignInPassword get password;
   @override
   EmailAddress get email;
-
-  /// Create a copy of SignInForm
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SignInFormImplCopyWith<_$SignInFormImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -432,9 +410,7 @@ mixin _$ProfileForm {
   Option<DateTime> get birthDate => throw _privateConstructorUsedError;
   Option<String> get imageUrl => throw _privateConstructorUsedError;
 
-  /// Create a copy of ProfileForm
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ProfileFormCopyWith<ProfileForm> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -464,8 +440,6 @@ class _$ProfileFormCopyWithImpl<$Res, $Val extends ProfileForm>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ProfileForm
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -530,8 +504,6 @@ class __$$ProfileFormImplCopyWithImpl<$Res>
       _$ProfileFormImpl _value, $Res Function(_$ProfileFormImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ProfileForm
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -622,9 +594,7 @@ class _$ProfileFormImpl extends _ProfileForm {
   int get hashCode => Object.hash(
       runtimeType, fullName, email, gender, province, birthDate, imageUrl);
 
-  /// Create a copy of ProfileForm
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ProfileFormImplCopyWith<_$ProfileFormImpl> get copyWith =>
@@ -653,11 +623,8 @@ abstract class _ProfileForm extends ProfileForm {
   Option<DateTime> get birthDate;
   @override
   Option<String> get imageUrl;
-
-  /// Create a copy of ProfileForm
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ProfileFormImplCopyWith<_$ProfileFormImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

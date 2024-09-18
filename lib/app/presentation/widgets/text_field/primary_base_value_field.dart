@@ -2,7 +2,7 @@ part of '../text_field.dart';
 
 class PrimaryBaseValueField extends StatelessWidget {
   const PrimaryBaseValueField({
-    Key? key,
+    super.key,
     this.value,
     this.hintText,
     required this.isError,
@@ -13,7 +13,7 @@ class PrimaryBaseValueField extends StatelessWidget {
     this.isActive = false,
     this.textColor,
     this.backgroundColor,
-  }) : super(key: key);
+  });
 
   final String? value;
   final String? hintText;
@@ -32,7 +32,7 @@ class PrimaryBaseValueField extends StatelessWidget {
       clipBehavior: Clip.antiAliasWithSaveLayer,
       decoration: BoxDecoration(
         border: Border.all(
-          color: cColorGrey3,
+          color: cColorGrey4,
           width: 1,
         ),
         color: backgroundColor,

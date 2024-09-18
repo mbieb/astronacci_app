@@ -72,9 +72,6 @@ class _$AuthSuccessCopyWithImpl<$Res, $Val extends AuthSuccess>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of AuthSuccess
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -96,8 +93,6 @@ class __$$SuccessImplCopyWithImpl<$Res>
       _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AuthSuccess
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -111,8 +106,6 @@ class __$$SuccessImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of AuthSuccess
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserCopyWith<$Res> get user {
@@ -146,9 +139,7 @@ class _$SuccessImpl implements _Success {
   @override
   int get hashCode => Object.hash(runtimeType, user);
 
-  /// Create a copy of AuthSuccess
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
@@ -221,10 +212,7 @@ abstract class _Success implements AuthSuccess {
   const factory _Success(final User user) = _$SuccessImpl;
 
   User get user;
-
-  /// Create a copy of AuthSuccess
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -243,9 +231,6 @@ class __$$UpdateProfileSuccessImplCopyWithImpl<$Res>
   __$$UpdateProfileSuccessImplCopyWithImpl(_$UpdateProfileSuccessImpl _value,
       $Res Function(_$UpdateProfileSuccessImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AuthSuccess
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

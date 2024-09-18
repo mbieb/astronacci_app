@@ -13,7 +13,7 @@ class PrimaryPasswordField extends StatefulWidget {
   final TextInputAction? textInputAction;
 
   const PrimaryPasswordField({
-    Key? key,
+    super.key,
     this.title,
     this.hintText,
     this.isRequired = true,
@@ -24,7 +24,7 @@ class PrimaryPasswordField extends StatefulWidget {
     this.onSubmitted,
     this.error,
     this.textInputAction,
-  }) : super(key: key);
+  });
 
   @override
   State<PrimaryPasswordField> createState() => _PrimaryPasswordFieldState();
@@ -78,6 +78,7 @@ class _PrimaryPasswordFieldState extends State<PrimaryPasswordField> {
               isRequired: widget.isRequired,
             ),
           PrimaryBaseTextField(
+            error: widget.error,
             isError: isError || isValidationError,
             onChanged: widget.onChanged,
             onSubmitted: widget.onSubmitted,
@@ -105,18 +106,6 @@ class _PrimaryPasswordFieldState extends State<PrimaryPasswordField> {
             ),
             focusNode: focusNode,
           ),
-          if (widget.error != null)
-            Visibility(
-              visible:
-                  widget.error != null || widget.passwordValidation != null,
-              child: _TextFieldFooter(
-                // iconPath: isError ? cIconMessageDanger : cIconMessageSuccess,
-                title: Text(
-                  widget.error!,
-                  style: cTextRegSM.copyWith(color: Colors.red),
-                ),
-              ),
-            ),
           gapH16,
         ],
       ),

@@ -8,18 +8,18 @@ class PrimaryButton extends StatelessWidget {
   final Widget? icon;
 
   const PrimaryButton({
-    Key? key,
+    super.key,
     required this.onPressed,
     required this.text,
     this.icon,
-  }) : super(key: key);
+  });
   @override
   Widget build(BuildContext context) {
     ThemeData themeData = Theme.of(context);
     return DefaultTextStyle(
       style: cTextMed,
       child: MaterialButton(
-        color: themeData.primaryColor,
+        color: Colors.blue,
         disabledColor: const Color(0xffbababa),
         splashColor: Colors.white,
         focusElevation: 0,

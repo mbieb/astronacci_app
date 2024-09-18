@@ -84,9 +84,6 @@ class _$SignInEventCopyWithImpl<$Res, $Val extends SignInEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of SignInEvent
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -103,9 +100,6 @@ class __$$StartedImplCopyWithImpl<$Res>
   __$$StartedImplCopyWithImpl(
       _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of SignInEvent
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -223,8 +217,6 @@ class __$$PasswordChangedImplCopyWithImpl<$Res>
       _$PasswordChangedImpl _value, $Res Function(_$PasswordChangedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of SignInEvent
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -264,9 +256,7 @@ class _$PasswordChangedImpl implements _PasswordChanged {
   @override
   int get hashCode => Object.hash(runtimeType, password);
 
-  /// Create a copy of SignInEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$PasswordChangedImplCopyWith<_$PasswordChangedImpl> get copyWith =>
@@ -352,10 +342,7 @@ abstract class _PasswordChanged implements SignInEvent {
   const factory _PasswordChanged(final String password) = _$PasswordChangedImpl;
 
   String get password;
-
-  /// Create a copy of SignInEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$PasswordChangedImplCopyWith<_$PasswordChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -377,8 +364,6 @@ class __$$EmailChangedImplCopyWithImpl<$Res>
       _$EmailChangedImpl _value, $Res Function(_$EmailChangedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of SignInEvent
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -417,9 +402,7 @@ class _$EmailChangedImpl implements _EmailChanged {
   @override
   int get hashCode => Object.hash(runtimeType, email);
 
-  /// Create a copy of SignInEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$EmailChangedImplCopyWith<_$EmailChangedImpl> get copyWith =>
@@ -504,10 +487,7 @@ abstract class _EmailChanged implements SignInEvent {
   const factory _EmailChanged(final String email) = _$EmailChangedImpl;
 
   String get email;
-
-  /// Create a copy of SignInEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$EmailChangedImplCopyWith<_$EmailChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -526,9 +506,6 @@ class __$$SubmitImplCopyWithImpl<$Res>
   __$$SubmitImplCopyWithImpl(
       _$SubmitImpl _value, $Res Function(_$SubmitImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of SignInEvent
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -636,9 +613,7 @@ mixin _$SignInState {
   Option<Either<AppFailure<AuthFailure>, AuthSuccess>>
       get failureOrSuccessOption => throw _privateConstructorUsedError;
 
-  /// Create a copy of SignInState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $SignInStateCopyWith<SignInState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -668,8 +643,6 @@ class _$SignInStateCopyWithImpl<$Res, $Val extends SignInState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of SignInState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -693,8 +666,6 @@ class _$SignInStateCopyWithImpl<$Res, $Val extends SignInState>
     ) as $Val);
   }
 
-  /// Create a copy of SignInState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SignInFormCopyWith<$Res> get form {
@@ -730,8 +701,6 @@ class __$$SignInStateImplCopyWithImpl<$Res>
       _$SignInStateImpl _value, $Res Function(_$SignInStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of SignInState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -794,9 +763,7 @@ class _$SignInStateImpl extends _SignInState {
   int get hashCode =>
       Object.hash(runtimeType, form, isLoading, failureOrSuccessOption);
 
-  /// Create a copy of SignInState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SignInStateImplCopyWith<_$SignInStateImpl> get copyWith =>
@@ -818,11 +785,8 @@ abstract class _SignInState extends SignInState {
   @override
   Option<Either<AppFailure<AuthFailure>, AuthSuccess>>
       get failureOrSuccessOption;
-
-  /// Create a copy of SignInState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SignInStateImplCopyWith<_$SignInStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

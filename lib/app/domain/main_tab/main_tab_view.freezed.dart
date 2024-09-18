@@ -72,9 +72,6 @@ class _$MainTabViewCopyWithImpl<$Res, $Val extends MainTabView>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of MainTabView
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -90,9 +87,6 @@ class __$$HomeImplCopyWithImpl<$Res>
     implements _$$HomeImplCopyWith<$Res> {
   __$$HomeImplCopyWithImpl(_$HomeImpl _value, $Res Function(_$HomeImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of MainTabView
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -195,9 +189,6 @@ class __$$ProfileImplCopyWithImpl<$Res>
   __$$ProfileImplCopyWithImpl(
       _$ProfileImpl _value, $Res Function(_$ProfileImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of MainTabView
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

@@ -18,8 +18,8 @@ class PrimaryCustomizedOnTapField extends StatelessWidget {
     this.trailing,
     this.value,
     this.isActive,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -21,6 +21,9 @@ import '../app/application/register/register_bloc.dart' as _i1033;
 import '../app/application/sign_in/sign_in_bloc.dart' as _i779;
 import '../app/domain/auth/i_auth_repository.dart' as _i971;
 import '../app/infrastructure/api_helper/api_helper.dart' as _i426;
+import '../app/infrastructure/auth/auth_local_data_source.dart' as _i266;
+import '../app/infrastructure/auth/auth_remote_data_source.dart' as _i607;
+import '../app/infrastructure/auth/auth_repository.dart' as _i550;
 import '../app/infrastructure/register_module/register_module.dart' as _i131;
 import '../app/infrastructure/storage/secure_storage.dart' as _i977;
 
@@ -41,13 +44,23 @@ _i174.GetIt init(
   gh.lazySingleton<_i895.Connectivity>(() => registerModule.connectivity);
   gh.lazySingleton<_i974.Logger>(() => registerModule.logger);
   gh.lazySingleton<_i361.Dio>(() => registerModule.dio());
-  gh.factory<_i51.AuthBloc>(() => _i51.AuthBloc(gh<_i971.IAuthRepository>()));
-  gh.factory<_i871.InitialBloc>(
-      () => _i871.InitialBloc(gh<_i971.IAuthRepository>()));
+  gh.factory<_i266.AuthLocalDataSource>(
+      () => _i266.AuthLocalDataSource(gh<_i977.SecureStorage>()));
   gh.singleton<_i426.ApiHelper>(() => _i426.ApiHelper(
         gh<_i361.Dio>(),
         gh<_i895.Connectivity>(),
       ));
+  gh.factory<_i607.AuthRemoteDataSource>(() => _i607.AuthRemoteDataSource(
+        gh<_i426.ApiHelper>(),
+        gh<_i183.ImagePicker>(),
+      ));
+  gh.lazySingleton<_i971.IAuthRepository>(() => _i550.AuthRepository(
+        gh<_i266.AuthLocalDataSource>(),
+        gh<_i607.AuthRemoteDataSource>(),
+      ));
+  gh.factory<_i51.AuthBloc>(() => _i51.AuthBloc(gh<_i971.IAuthRepository>()));
+  gh.factory<_i871.InitialBloc>(
+      () => _i871.InitialBloc(gh<_i971.IAuthRepository>()));
   gh.factory<_i1033.RegisterBloc>(
       () => _i1033.RegisterBloc(gh<_i971.IAuthRepository>()));
   gh.factory<_i779.SignInBloc>(

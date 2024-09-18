@@ -24,7 +24,7 @@ class PrimaryTextField extends StatelessWidget {
   final bool isWithSpaceBottom;
   final TextAlign textAlign;
   const PrimaryTextField({
-    Key? key,
+    super.key,
     this.title,
     this.controller,
     this.onChanged,
@@ -47,7 +47,7 @@ class PrimaryTextField extends StatelessWidget {
     this.backgroundColor,
     this.isWithSpaceBottom = true,
     this.textAlign = TextAlign.start,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -80,17 +80,8 @@ class PrimaryTextField extends StatelessWidget {
           prefix: prefix,
           backgroundColor: backgroundColor,
           textAlign: textAlign,
+          error: error,
         ),
-        if (error != null)
-          _TextFieldFooter(
-            iconPath: '',
-            title: Text(
-              error!,
-              style: cTextRegSM.copyWith(
-                color: Colors.red,
-              ),
-            ),
-          ),
         isWithSpaceBottom ? gapH16 : const SizedBox.shrink(),
       ],
     );
@@ -99,10 +90,9 @@ class PrimaryTextField extends StatelessWidget {
 
 class _TextFieldTitle extends StatelessWidget {
   const _TextFieldTitle({
-    Key? key,
     required this.title,
     required this.isRequired,
-  }) : super(key: key);
+  });
 
   final String title;
   final bool isRequired;

@@ -22,8 +22,8 @@ class PrimaryDropdownField extends StatelessWidget {
     this.value,
     this.isActive,
     this.isWithSpaceBottom = true,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class PrimaryDropdownField extends StatelessWidget {
       borderRadius: BorderRadius.all(
         Radius.circular(8.0),
       ),
-      borderSide: BorderSide(color: cColorGrey3, width: 1.2),
+      borderSide: BorderSide(color: cColorGrey4, width: 1.2),
     );
 
     return Visibility(

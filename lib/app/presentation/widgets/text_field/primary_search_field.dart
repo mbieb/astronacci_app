@@ -15,7 +15,7 @@ class PrimarySearchField extends StatelessWidget {
   final int maxLines;
   final int? maxLength;
   const PrimarySearchField({
-    Key? key,
+    super.key,
     this.title,
     this.controller,
     this.onChanged,
@@ -29,7 +29,7 @@ class PrimarySearchField extends StatelessWidget {
     this.minLines,
     this.maxLines = 1,
     this.maxLength,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

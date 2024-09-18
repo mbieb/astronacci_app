@@ -2,7 +2,7 @@ part of '../text_field.dart';
 
 class PrimaryBaseTextField extends StatelessWidget {
   const PrimaryBaseTextField({
-    Key? key,
+    super.key,
     this.hintText,
     this.labelText,
     required this.isError,
@@ -15,6 +15,7 @@ class PrimaryBaseTextField extends StatelessWidget {
     this.obscureText = false,
     this.suffixIcon,
     this.suffix,
+    this.error,
     this.prefixIcon,
     this.prefix,
     this.textCapitalization,
@@ -24,7 +25,7 @@ class PrimaryBaseTextField extends StatelessWidget {
     this.focusNode,
     this.backgroundColor,
     this.textAlign = TextAlign.start,
-  }) : super(key: key);
+  });
 
   final String? hintText;
   final String? labelText;
@@ -47,6 +48,7 @@ class PrimaryBaseTextField extends StatelessWidget {
   final FocusNode? focusNode;
   final Color? backgroundColor;
   final TextAlign textAlign;
+  final String? error;
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +57,7 @@ class PrimaryBaseTextField extends StatelessWidget {
     final outlineInputBorder = OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
       borderSide: const BorderSide(
-        color: cColorGrey3,
+        color: cColorGrey4,
         width: 1,
       ),
       gapPadding: 0,
@@ -85,7 +87,6 @@ class PrimaryBaseTextField extends StatelessWidget {
         hintText: hintText,
         labelText: labelText,
         hintStyle: cTextAccentReg,
-        errorText: isError ? '' : null,
         counterText: '',
         enabledBorder: outlineInputBorder,
         fillColor: backgroundColor,
@@ -97,42 +98,20 @@ class PrimaryBaseTextField extends StatelessWidget {
           borderSide:
               BorderSide(color: themeData.colorScheme.primary, width: 1),
         ),
-        errorStyle: const TextStyle(fontSize: 0.05, color: Colors.red),
+        error: isError
+            ? Text(
+                error ?? '',
+                style: cTextRegSM.copyWith(
+                  color: Colors.red,
+                ),
+              )
+            : null,
+        // errorStyle: const TextStyle(fontSize: 0.05, color: Colors.red),
         errorMaxLines: 1,
         suffix: suffix,
         suffixIcon: suffixIcon,
         prefix: prefix,
         prefixIcon: prefixIcon,
-      ),
-    );
-  }
-}
-
-class _TextFieldFooter extends StatelessWidget {
-  final String? iconPath;
-  final Widget title;
-  final EdgeInsets? margin;
-  const _TextFieldFooter({
-    Key? key,
-    this.iconPath = '',
-    required this.title,
-    this.margin,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: margin ?? padding(top: 4),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Expanded(
-            child: DefaultTextStyle(
-              style: const TextStyle(height: 1.7),
-              child: title,
-            ),
-          ),
-        ],
       ),
     );
   }

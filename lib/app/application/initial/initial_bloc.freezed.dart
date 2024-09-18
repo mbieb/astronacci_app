@@ -72,9 +72,6 @@ class _$InitialEventCopyWithImpl<$Res, $Val extends InitialEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of InitialEvent
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -91,9 +88,6 @@ class __$$StartedImplCopyWithImpl<$Res>
   __$$StartedImplCopyWithImpl(
       _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of InitialEvent
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -196,9 +190,6 @@ class __$$AuthCheckImplCopyWithImpl<$Res>
   __$$AuthCheckImplCopyWithImpl(
       _$AuthCheckImpl _value, $Res Function(_$AuthCheckImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of InitialEvent
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -357,9 +348,6 @@ class _$InitialStateCopyWithImpl<$Res, $Val extends InitialState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of InitialState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -376,9 +364,6 @@ class __$$LoadingImplCopyWithImpl<$Res>
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of InitialState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -496,8 +481,6 @@ class __$$UnauthenticatedImplCopyWithImpl<$Res>
       _$UnauthenticatedImpl _value, $Res Function(_$UnauthenticatedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of InitialState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -537,9 +520,7 @@ class _$UnauthenticatedImpl implements _Unauthenticated {
   @override
   int get hashCode => Object.hash(runtimeType, isInitial);
 
-  /// Create a copy of InitialState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$UnauthenticatedImplCopyWith<_$UnauthenticatedImpl> get copyWith =>
@@ -625,10 +606,7 @@ abstract class _Unauthenticated implements InitialState {
   const factory _Unauthenticated(final bool isInitial) = _$UnauthenticatedImpl;
 
   bool get isInitial;
-
-  /// Create a copy of InitialState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$UnauthenticatedImplCopyWith<_$UnauthenticatedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -652,8 +630,6 @@ class __$$AuthenticatedImplCopyWithImpl<$Res>
       _$AuthenticatedImpl _value, $Res Function(_$AuthenticatedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of InitialState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -667,8 +643,6 @@ class __$$AuthenticatedImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of InitialState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserCopyWith<$Res> get user {
@@ -702,9 +676,7 @@ class _$AuthenticatedImpl implements _Authenticated {
   @override
   int get hashCode => Object.hash(runtimeType, user);
 
-  /// Create a copy of InitialState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AuthenticatedImplCopyWith<_$AuthenticatedImpl> get copyWith =>
@@ -790,10 +762,7 @@ abstract class _Authenticated implements InitialState {
       _$AuthenticatedImpl;
 
   User get user;
-
-  /// Create a copy of InitialState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AuthenticatedImplCopyWith<_$AuthenticatedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -817,8 +786,6 @@ class __$$FailedImplCopyWithImpl<$Res>
       _$FailedImpl _value, $Res Function(_$FailedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of InitialState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -832,8 +799,6 @@ class __$$FailedImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of InitialState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AppFailureCopyWith<dynamic, $Res> get failure {
@@ -867,9 +832,7 @@ class _$FailedImpl implements _Failed {
   @override
   int get hashCode => Object.hash(runtimeType, failure);
 
-  /// Create a copy of InitialState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FailedImplCopyWith<_$FailedImpl> get copyWith =>
@@ -954,10 +917,7 @@ abstract class _Failed implements InitialState {
   const factory _Failed(final AppFailure<dynamic> failure) = _$FailedImpl;
 
   AppFailure<dynamic> get failure;
-
-  /// Create a copy of InitialState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FailedImplCopyWith<_$FailedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

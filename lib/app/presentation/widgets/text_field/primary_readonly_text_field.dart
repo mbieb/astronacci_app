@@ -6,12 +6,12 @@ class PrimaryReadOnlyTextField extends StatelessWidget {
   final String? value;
   final Widget? icon;
   const PrimaryReadOnlyTextField({
-    Key? key,
+    super.key,
     this.title,
     this.hintText,
     this.value,
     this.icon,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class PrimaryReadOnlyTextField extends StatelessWidget {
         PrimaryBaseValueField(
           isError: false,
           value: value ?? hintText ?? '',
-          backgroundColor: cColorGrey2,
+          backgroundColor: cColorGrey3,
           textColor: cColorGrey4,
           leading: icon,
         ),
