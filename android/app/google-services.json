@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "782069176301",
+    "project_id": "astronacci-app",
+    "storage_bucket": "astronacci-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:782069176301:android:d6c9944fe04deb6c36f9e4",
+        "android_client_info": {
+          "package_name": "com.example.astro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCR-jA8sfwX9B_6muKpEOLcNViFA-7uhQ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

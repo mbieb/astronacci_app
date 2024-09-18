@@ -1,0 +1,1 @@
+{"flutter":{"platforms":{"android":{"default":{"projectId":"astronacci-app","appId":"1:782069176301:android:d6c9944fe04deb6c36f9e4","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"astronacci-app","configurations":{"android":"1:782069176301:android:d6c9944fe04deb6c36f9e4","ios":"1:782069176301:ios:7a3e5015766ba8c636f9e4"}}}}}}
