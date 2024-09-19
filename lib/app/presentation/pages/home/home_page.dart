@@ -1,7 +1,10 @@
 import 'package:astronacci_app/app/application/auth/auth_bloc.dart';
 import 'package:astronacci_app/app/domain/user/user.dart';
 import 'package:astronacci_app/app/presentation/constants/dimens.dart';
+import 'package:astronacci_app/app/presentation/helpers/failure_helper.dart';
+import 'package:astronacci_app/app/presentation/widgets/alert.dart';
 import 'package:astronacci_app/app/presentation/widgets/text_field.dart';
+import 'package:astronacci_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:astronacci_app/app/presentation/constants/colors.dart';
 import 'package:astronacci_app/app/presentation/constants/text_style.dart';
@@ -30,7 +33,27 @@ class _HomeBodyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     context.read<AuthBloc>().add(const AuthEvent.getUserList());
-    return BlocBuilder<AuthBloc, AuthState>(
+    I10n i10n = I10n.of(context);
+    return BlocConsumer<AuthBloc, AuthState>(
+      listener: (context, state) {
+        state.failureOrSuccessOption.fold(
+          () {},
+          (either) {
+            either.fold(
+              (failure) => failure.maybeWhen(
+                orElse: () => appFailureHandler(failure, context),
+                handled: (handled) => handled.maybeWhen(
+                  orElse: () {},
+                  error: (message) {
+                    Alert.notify(context, i10n.alertWarning, message);
+                  },
+                ),
+              ),
+              (success) {},
+            );
+          },
+        );
+      },
       builder: (context, state) {
         return AppScaffold(
           appBar: AppBar(
@@ -43,12 +66,17 @@ class _HomeBodyPage extends StatelessWidget {
             padding: padding(all: 16).copyWith(bottom: 0),
             child: Column(
               children: [
-                const PrimaryTextField(
-                  prefixIcon: Icon(
+                PrimaryTextField(
+                  prefixIcon: const Icon(
                     Icons.search,
                     color: cColorGrey4,
                   ),
                   hintText: 'Search User',
+                  onSubmitted: (value) {
+                    context
+                        .read<AuthBloc>()
+                        .add(AuthEvent.getUserList(query: value));
+                  },
                 ),
                 gapH12,
                 Expanded(

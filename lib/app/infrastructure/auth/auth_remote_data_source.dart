@@ -180,18 +180,29 @@ class AuthRemoteDataSource {
     int? offset = 0,
     String? lastName,
   }) async {
-    var data = FirebaseFirestore.instance
-        .collection('users')
-        .limit(5)
-        .orderBy('fullName');
+    var data =
+        FirebaseFirestore.instance.collection('users').orderBy('fullName');
 
     if (lastName != null) {
       data = data.startAfter([lastName]);
     }
 
+    if (query == null || query.isEmpty) {
+      data = data.limit(5);
+    }
+
     final snapshot = await data.get();
-    final List<UserDto> userList =
-        snapshot.docs.map((doc) => UserDto.fromFirestore(doc)).toList();
+    List<UserDto> userList = snapshot.docs
+        .map((doc) => UserDto.fromFirestore(doc)) // Convert to UserDto
+
+        .toList();
+
+    if (query != null && query.isNotEmpty) {
+      userList = userList
+          .where((user) =>
+              (user.name ?? '').toLowerCase().contains(query.toLowerCase()))
+          .toList();
+    }
 
     return userList;
   }
