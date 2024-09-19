@@ -173,4 +173,26 @@ class AuthRemoteDataSource {
 
     return image.path;
   }
+
+  Future<List<UserDto>> getUserList({
+    String? query,
+    int? limit = 10,
+    int? offset = 0,
+    String? lastName,
+  }) async {
+    var data = FirebaseFirestore.instance
+        .collection('users')
+        .limit(5)
+        .orderBy('fullName');
+
+    if (lastName != null) {
+      data = data.startAfter([lastName]);
+    }
+
+    final snapshot = await data.get();
+    final List<UserDto> userList =
+        snapshot.docs.map((doc) => UserDto.fromFirestore(doc)).toList();
+
+    return userList;
+  }
 }

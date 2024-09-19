@@ -151,4 +151,24 @@ class AuthRepository implements IAuthRepository {
       return left(dynamicErrorToFailure(e, stack));
     }
   }
+
+  @override
+  Future<Either<AppFailure<AuthFailure>, List<User>>> getUserList({
+    String? query,
+    int? limit = 10,
+    int? offset = 0,
+    String? lastName,
+  }) async {
+    try {
+      final userList = await _authRemoteDataSource.getUserList(
+        query: query,
+        limit: limit,
+        offset: offset,
+        lastName: lastName,
+      );
+      return right(userList.map((e) => e.toDomain()).toList());
+    } catch (e, stack) {
+      return left(dynamicErrorToFailure(e, stack));
+    }
+  }
 }

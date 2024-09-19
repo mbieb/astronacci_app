@@ -26,6 +26,8 @@ mixin _$AuthEvent {
     required TResult Function(DropdownText province) provinceChanged,
     required TResult Function(ImageSource imageSource) takePicture,
     required TResult Function() updateProfile,
+    required TResult Function() getUserList,
+    required TResult Function() nextPage,
     required TResult Function() signOut,
   }) =>
       throw _privateConstructorUsedError;
@@ -39,6 +41,8 @@ mixin _$AuthEvent {
     TResult? Function(DropdownText province)? provinceChanged,
     TResult? Function(ImageSource imageSource)? takePicture,
     TResult? Function()? updateProfile,
+    TResult? Function()? getUserList,
+    TResult? Function()? nextPage,
     TResult? Function()? signOut,
   }) =>
       throw _privateConstructorUsedError;
@@ -52,6 +56,8 @@ mixin _$AuthEvent {
     TResult Function(DropdownText province)? provinceChanged,
     TResult Function(ImageSource imageSource)? takePicture,
     TResult Function()? updateProfile,
+    TResult Function()? getUserList,
+    TResult Function()? nextPage,
     TResult Function()? signOut,
     required TResult orElse(),
   }) =>
@@ -66,6 +72,8 @@ mixin _$AuthEvent {
     required TResult Function(_ProvinceChanged value) provinceChanged,
     required TResult Function(_TakePicture value) takePicture,
     required TResult Function(_UpdateProfile value) updateProfile,
+    required TResult Function(_GetUserList value) getUserList,
+    required TResult Function(_NextPage value) nextPage,
     required TResult Function(_SignOut value) signOut,
   }) =>
       throw _privateConstructorUsedError;
@@ -79,6 +87,8 @@ mixin _$AuthEvent {
     TResult? Function(_ProvinceChanged value)? provinceChanged,
     TResult? Function(_TakePicture value)? takePicture,
     TResult? Function(_UpdateProfile value)? updateProfile,
+    TResult? Function(_GetUserList value)? getUserList,
+    TResult? Function(_NextPage value)? nextPage,
     TResult? Function(_SignOut value)? signOut,
   }) =>
       throw _privateConstructorUsedError;
@@ -92,6 +102,8 @@ mixin _$AuthEvent {
     TResult Function(_ProvinceChanged value)? provinceChanged,
     TResult Function(_TakePicture value)? takePicture,
     TResult Function(_UpdateProfile value)? updateProfile,
+    TResult Function(_GetUserList value)? getUserList,
+    TResult Function(_NextPage value)? nextPage,
     TResult Function(_SignOut value)? signOut,
     required TResult orElse(),
   }) =>
@@ -161,6 +173,8 @@ class _$StartedImpl implements _Started {
     required TResult Function(DropdownText province) provinceChanged,
     required TResult Function(ImageSource imageSource) takePicture,
     required TResult Function() updateProfile,
+    required TResult Function() getUserList,
+    required TResult Function() nextPage,
     required TResult Function() signOut,
   }) {
     return started();
@@ -177,6 +191,8 @@ class _$StartedImpl implements _Started {
     TResult? Function(DropdownText province)? provinceChanged,
     TResult? Function(ImageSource imageSource)? takePicture,
     TResult? Function()? updateProfile,
+    TResult? Function()? getUserList,
+    TResult? Function()? nextPage,
     TResult? Function()? signOut,
   }) {
     return started?.call();
@@ -193,6 +209,8 @@ class _$StartedImpl implements _Started {
     TResult Function(DropdownText province)? provinceChanged,
     TResult Function(ImageSource imageSource)? takePicture,
     TResult Function()? updateProfile,
+    TResult Function()? getUserList,
+    TResult Function()? nextPage,
     TResult Function()? signOut,
     required TResult orElse(),
   }) {
@@ -213,6 +231,8 @@ class _$StartedImpl implements _Started {
     required TResult Function(_ProvinceChanged value) provinceChanged,
     required TResult Function(_TakePicture value) takePicture,
     required TResult Function(_UpdateProfile value) updateProfile,
+    required TResult Function(_GetUserList value) getUserList,
+    required TResult Function(_NextPage value) nextPage,
     required TResult Function(_SignOut value) signOut,
   }) {
     return started(this);
@@ -229,6 +249,8 @@ class _$StartedImpl implements _Started {
     TResult? Function(_ProvinceChanged value)? provinceChanged,
     TResult? Function(_TakePicture value)? takePicture,
     TResult? Function(_UpdateProfile value)? updateProfile,
+    TResult? Function(_GetUserList value)? getUserList,
+    TResult? Function(_NextPage value)? nextPage,
     TResult? Function(_SignOut value)? signOut,
   }) {
     return started?.call(this);
@@ -245,6 +267,8 @@ class _$StartedImpl implements _Started {
     TResult Function(_ProvinceChanged value)? provinceChanged,
     TResult Function(_TakePicture value)? takePicture,
     TResult Function(_UpdateProfile value)? updateProfile,
+    TResult Function(_GetUserList value)? getUserList,
+    TResult Function(_NextPage value)? nextPage,
     TResult Function(_SignOut value)? signOut,
     required TResult orElse(),
   }) {
@@ -345,6 +369,8 @@ class _$PatchImpl implements _Patch {
     required TResult Function(DropdownText province) provinceChanged,
     required TResult Function(ImageSource imageSource) takePicture,
     required TResult Function() updateProfile,
+    required TResult Function() getUserList,
+    required TResult Function() nextPage,
     required TResult Function() signOut,
   }) {
     return patch(user);
@@ -361,6 +387,8 @@ class _$PatchImpl implements _Patch {
     TResult? Function(DropdownText province)? provinceChanged,
     TResult? Function(ImageSource imageSource)? takePicture,
     TResult? Function()? updateProfile,
+    TResult? Function()? getUserList,
+    TResult? Function()? nextPage,
     TResult? Function()? signOut,
   }) {
     return patch?.call(user);
@@ -377,6 +405,8 @@ class _$PatchImpl implements _Patch {
     TResult Function(DropdownText province)? provinceChanged,
     TResult Function(ImageSource imageSource)? takePicture,
     TResult Function()? updateProfile,
+    TResult Function()? getUserList,
+    TResult Function()? nextPage,
     TResult Function()? signOut,
     required TResult orElse(),
   }) {
@@ -397,6 +427,8 @@ class _$PatchImpl implements _Patch {
     required TResult Function(_ProvinceChanged value) provinceChanged,
     required TResult Function(_TakePicture value) takePicture,
     required TResult Function(_UpdateProfile value) updateProfile,
+    required TResult Function(_GetUserList value) getUserList,
+    required TResult Function(_NextPage value) nextPage,
     required TResult Function(_SignOut value) signOut,
   }) {
     return patch(this);
@@ -413,6 +445,8 @@ class _$PatchImpl implements _Patch {
     TResult? Function(_ProvinceChanged value)? provinceChanged,
     TResult? Function(_TakePicture value)? takePicture,
     TResult? Function(_UpdateProfile value)? updateProfile,
+    TResult? Function(_GetUserList value)? getUserList,
+    TResult? Function(_NextPage value)? nextPage,
     TResult? Function(_SignOut value)? signOut,
   }) {
     return patch?.call(this);
@@ -429,6 +463,8 @@ class _$PatchImpl implements _Patch {
     TResult Function(_ProvinceChanged value)? provinceChanged,
     TResult Function(_TakePicture value)? takePicture,
     TResult Function(_UpdateProfile value)? updateProfile,
+    TResult Function(_GetUserList value)? getUserList,
+    TResult Function(_NextPage value)? nextPage,
     TResult Function(_SignOut value)? signOut,
     required TResult orElse(),
   }) {
@@ -522,6 +558,8 @@ class _$FullNameChangedImpl implements _FullNameChanged {
     required TResult Function(DropdownText province) provinceChanged,
     required TResult Function(ImageSource imageSource) takePicture,
     required TResult Function() updateProfile,
+    required TResult Function() getUserList,
+    required TResult Function() nextPage,
     required TResult Function() signOut,
   }) {
     return fullNameChanged(fullName);
@@ -538,6 +576,8 @@ class _$FullNameChangedImpl implements _FullNameChanged {
     TResult? Function(DropdownText province)? provinceChanged,
     TResult? Function(ImageSource imageSource)? takePicture,
     TResult? Function()? updateProfile,
+    TResult? Function()? getUserList,
+    TResult? Function()? nextPage,
     TResult? Function()? signOut,
   }) {
     return fullNameChanged?.call(fullName);
@@ -554,6 +594,8 @@ class _$FullNameChangedImpl implements _FullNameChanged {
     TResult Function(DropdownText province)? provinceChanged,
     TResult Function(ImageSource imageSource)? takePicture,
     TResult Function()? updateProfile,
+    TResult Function()? getUserList,
+    TResult Function()? nextPage,
     TResult Function()? signOut,
     required TResult orElse(),
   }) {
@@ -574,6 +616,8 @@ class _$FullNameChangedImpl implements _FullNameChanged {
     required TResult Function(_ProvinceChanged value) provinceChanged,
     required TResult Function(_TakePicture value) takePicture,
     required TResult Function(_UpdateProfile value) updateProfile,
+    required TResult Function(_GetUserList value) getUserList,
+    required TResult Function(_NextPage value) nextPage,
     required TResult Function(_SignOut value) signOut,
   }) {
     return fullNameChanged(this);
@@ -590,6 +634,8 @@ class _$FullNameChangedImpl implements _FullNameChanged {
     TResult? Function(_ProvinceChanged value)? provinceChanged,
     TResult? Function(_TakePicture value)? takePicture,
     TResult? Function(_UpdateProfile value)? updateProfile,
+    TResult? Function(_GetUserList value)? getUserList,
+    TResult? Function(_NextPage value)? nextPage,
     TResult? Function(_SignOut value)? signOut,
   }) {
     return fullNameChanged?.call(this);
@@ -606,6 +652,8 @@ class _$FullNameChangedImpl implements _FullNameChanged {
     TResult Function(_ProvinceChanged value)? provinceChanged,
     TResult Function(_TakePicture value)? takePicture,
     TResult Function(_UpdateProfile value)? updateProfile,
+    TResult Function(_GetUserList value)? getUserList,
+    TResult Function(_NextPage value)? nextPage,
     TResult Function(_SignOut value)? signOut,
     required TResult orElse(),
   }) {
@@ -707,6 +755,8 @@ class _$GenderChangedImpl implements _GenderChanged {
     required TResult Function(DropdownText province) provinceChanged,
     required TResult Function(ImageSource imageSource) takePicture,
     required TResult Function() updateProfile,
+    required TResult Function() getUserList,
+    required TResult Function() nextPage,
     required TResult Function() signOut,
   }) {
     return genderChanged(gender);
@@ -723,6 +773,8 @@ class _$GenderChangedImpl implements _GenderChanged {
     TResult? Function(DropdownText province)? provinceChanged,
     TResult? Function(ImageSource imageSource)? takePicture,
     TResult? Function()? updateProfile,
+    TResult? Function()? getUserList,
+    TResult? Function()? nextPage,
     TResult? Function()? signOut,
   }) {
     return genderChanged?.call(gender);
@@ -739,6 +791,8 @@ class _$GenderChangedImpl implements _GenderChanged {
     TResult Function(DropdownText province)? provinceChanged,
     TResult Function(ImageSource imageSource)? takePicture,
     TResult Function()? updateProfile,
+    TResult Function()? getUserList,
+    TResult Function()? nextPage,
     TResult Function()? signOut,
     required TResult orElse(),
   }) {
@@ -759,6 +813,8 @@ class _$GenderChangedImpl implements _GenderChanged {
     required TResult Function(_ProvinceChanged value) provinceChanged,
     required TResult Function(_TakePicture value) takePicture,
     required TResult Function(_UpdateProfile value) updateProfile,
+    required TResult Function(_GetUserList value) getUserList,
+    required TResult Function(_NextPage value) nextPage,
     required TResult Function(_SignOut value) signOut,
   }) {
     return genderChanged(this);
@@ -775,6 +831,8 @@ class _$GenderChangedImpl implements _GenderChanged {
     TResult? Function(_ProvinceChanged value)? provinceChanged,
     TResult? Function(_TakePicture value)? takePicture,
     TResult? Function(_UpdateProfile value)? updateProfile,
+    TResult? Function(_GetUserList value)? getUserList,
+    TResult? Function(_NextPage value)? nextPage,
     TResult? Function(_SignOut value)? signOut,
   }) {
     return genderChanged?.call(this);
@@ -791,6 +849,8 @@ class _$GenderChangedImpl implements _GenderChanged {
     TResult Function(_ProvinceChanged value)? provinceChanged,
     TResult Function(_TakePicture value)? takePicture,
     TResult Function(_UpdateProfile value)? updateProfile,
+    TResult Function(_GetUserList value)? getUserList,
+    TResult Function(_NextPage value)? nextPage,
     TResult Function(_SignOut value)? signOut,
     required TResult orElse(),
   }) {
@@ -884,6 +944,8 @@ class _$BirthDateChangedImpl implements _BirthDateChanged {
     required TResult Function(DropdownText province) provinceChanged,
     required TResult Function(ImageSource imageSource) takePicture,
     required TResult Function() updateProfile,
+    required TResult Function() getUserList,
+    required TResult Function() nextPage,
     required TResult Function() signOut,
   }) {
     return birthDateChanged(birthDate);
@@ -900,6 +962,8 @@ class _$BirthDateChangedImpl implements _BirthDateChanged {
     TResult? Function(DropdownText province)? provinceChanged,
     TResult? Function(ImageSource imageSource)? takePicture,
     TResult? Function()? updateProfile,
+    TResult? Function()? getUserList,
+    TResult? Function()? nextPage,
     TResult? Function()? signOut,
   }) {
     return birthDateChanged?.call(birthDate);
@@ -916,6 +980,8 @@ class _$BirthDateChangedImpl implements _BirthDateChanged {
     TResult Function(DropdownText province)? provinceChanged,
     TResult Function(ImageSource imageSource)? takePicture,
     TResult Function()? updateProfile,
+    TResult Function()? getUserList,
+    TResult Function()? nextPage,
     TResult Function()? signOut,
     required TResult orElse(),
   }) {
@@ -936,6 +1002,8 @@ class _$BirthDateChangedImpl implements _BirthDateChanged {
     required TResult Function(_ProvinceChanged value) provinceChanged,
     required TResult Function(_TakePicture value) takePicture,
     required TResult Function(_UpdateProfile value) updateProfile,
+    required TResult Function(_GetUserList value) getUserList,
+    required TResult Function(_NextPage value) nextPage,
     required TResult Function(_SignOut value) signOut,
   }) {
     return birthDateChanged(this);
@@ -952,6 +1020,8 @@ class _$BirthDateChangedImpl implements _BirthDateChanged {
     TResult? Function(_ProvinceChanged value)? provinceChanged,
     TResult? Function(_TakePicture value)? takePicture,
     TResult? Function(_UpdateProfile value)? updateProfile,
+    TResult? Function(_GetUserList value)? getUserList,
+    TResult? Function(_NextPage value)? nextPage,
     TResult? Function(_SignOut value)? signOut,
   }) {
     return birthDateChanged?.call(this);
@@ -968,6 +1038,8 @@ class _$BirthDateChangedImpl implements _BirthDateChanged {
     TResult Function(_ProvinceChanged value)? provinceChanged,
     TResult Function(_TakePicture value)? takePicture,
     TResult Function(_UpdateProfile value)? updateProfile,
+    TResult Function(_GetUserList value)? getUserList,
+    TResult Function(_NextPage value)? nextPage,
     TResult Function(_SignOut value)? signOut,
     required TResult orElse(),
   }) {
@@ -1072,6 +1144,8 @@ class _$ProvinceChangedImpl implements _ProvinceChanged {
     required TResult Function(DropdownText province) provinceChanged,
     required TResult Function(ImageSource imageSource) takePicture,
     required TResult Function() updateProfile,
+    required TResult Function() getUserList,
+    required TResult Function() nextPage,
     required TResult Function() signOut,
   }) {
     return provinceChanged(province);
@@ -1088,6 +1162,8 @@ class _$ProvinceChangedImpl implements _ProvinceChanged {
     TResult? Function(DropdownText province)? provinceChanged,
     TResult? Function(ImageSource imageSource)? takePicture,
     TResult? Function()? updateProfile,
+    TResult? Function()? getUserList,
+    TResult? Function()? nextPage,
     TResult? Function()? signOut,
   }) {
     return provinceChanged?.call(province);
@@ -1104,6 +1180,8 @@ class _$ProvinceChangedImpl implements _ProvinceChanged {
     TResult Function(DropdownText province)? provinceChanged,
     TResult Function(ImageSource imageSource)? takePicture,
     TResult Function()? updateProfile,
+    TResult Function()? getUserList,
+    TResult Function()? nextPage,
     TResult Function()? signOut,
     required TResult orElse(),
   }) {
@@ -1124,6 +1202,8 @@ class _$ProvinceChangedImpl implements _ProvinceChanged {
     required TResult Function(_ProvinceChanged value) provinceChanged,
     required TResult Function(_TakePicture value) takePicture,
     required TResult Function(_UpdateProfile value) updateProfile,
+    required TResult Function(_GetUserList value) getUserList,
+    required TResult Function(_NextPage value) nextPage,
     required TResult Function(_SignOut value) signOut,
   }) {
     return provinceChanged(this);
@@ -1140,6 +1220,8 @@ class _$ProvinceChangedImpl implements _ProvinceChanged {
     TResult? Function(_ProvinceChanged value)? provinceChanged,
     TResult? Function(_TakePicture value)? takePicture,
     TResult? Function(_UpdateProfile value)? updateProfile,
+    TResult? Function(_GetUserList value)? getUserList,
+    TResult? Function(_NextPage value)? nextPage,
     TResult? Function(_SignOut value)? signOut,
   }) {
     return provinceChanged?.call(this);
@@ -1156,6 +1238,8 @@ class _$ProvinceChangedImpl implements _ProvinceChanged {
     TResult Function(_ProvinceChanged value)? provinceChanged,
     TResult Function(_TakePicture value)? takePicture,
     TResult Function(_UpdateProfile value)? updateProfile,
+    TResult Function(_GetUserList value)? getUserList,
+    TResult Function(_NextPage value)? nextPage,
     TResult Function(_SignOut value)? signOut,
     required TResult orElse(),
   }) {
@@ -1249,6 +1333,8 @@ class _$TakePictureImpl implements _TakePicture {
     required TResult Function(DropdownText province) provinceChanged,
     required TResult Function(ImageSource imageSource) takePicture,
     required TResult Function() updateProfile,
+    required TResult Function() getUserList,
+    required TResult Function() nextPage,
     required TResult Function() signOut,
   }) {
     return takePicture(imageSource);
@@ -1265,6 +1351,8 @@ class _$TakePictureImpl implements _TakePicture {
     TResult? Function(DropdownText province)? provinceChanged,
     TResult? Function(ImageSource imageSource)? takePicture,
     TResult? Function()? updateProfile,
+    TResult? Function()? getUserList,
+    TResult? Function()? nextPage,
     TResult? Function()? signOut,
   }) {
     return takePicture?.call(imageSource);
@@ -1281,6 +1369,8 @@ class _$TakePictureImpl implements _TakePicture {
     TResult Function(DropdownText province)? provinceChanged,
     TResult Function(ImageSource imageSource)? takePicture,
     TResult Function()? updateProfile,
+    TResult Function()? getUserList,
+    TResult Function()? nextPage,
     TResult Function()? signOut,
     required TResult orElse(),
   }) {
@@ -1301,6 +1391,8 @@ class _$TakePictureImpl implements _TakePicture {
     required TResult Function(_ProvinceChanged value) provinceChanged,
     required TResult Function(_TakePicture value) takePicture,
     required TResult Function(_UpdateProfile value) updateProfile,
+    required TResult Function(_GetUserList value) getUserList,
+    required TResult Function(_NextPage value) nextPage,
     required TResult Function(_SignOut value) signOut,
   }) {
     return takePicture(this);
@@ -1317,6 +1409,8 @@ class _$TakePictureImpl implements _TakePicture {
     TResult? Function(_ProvinceChanged value)? provinceChanged,
     TResult? Function(_TakePicture value)? takePicture,
     TResult? Function(_UpdateProfile value)? updateProfile,
+    TResult? Function(_GetUserList value)? getUserList,
+    TResult? Function(_NextPage value)? nextPage,
     TResult? Function(_SignOut value)? signOut,
   }) {
     return takePicture?.call(this);
@@ -1333,6 +1427,8 @@ class _$TakePictureImpl implements _TakePicture {
     TResult Function(_ProvinceChanged value)? provinceChanged,
     TResult Function(_TakePicture value)? takePicture,
     TResult Function(_UpdateProfile value)? updateProfile,
+    TResult Function(_GetUserList value)? getUserList,
+    TResult Function(_NextPage value)? nextPage,
     TResult Function(_SignOut value)? signOut,
     required TResult orElse(),
   }) {
@@ -1398,6 +1494,8 @@ class _$UpdateProfileImpl implements _UpdateProfile {
     required TResult Function(DropdownText province) provinceChanged,
     required TResult Function(ImageSource imageSource) takePicture,
     required TResult Function() updateProfile,
+    required TResult Function() getUserList,
+    required TResult Function() nextPage,
     required TResult Function() signOut,
   }) {
     return updateProfile();
@@ -1414,6 +1512,8 @@ class _$UpdateProfileImpl implements _UpdateProfile {
     TResult? Function(DropdownText province)? provinceChanged,
     TResult? Function(ImageSource imageSource)? takePicture,
     TResult? Function()? updateProfile,
+    TResult? Function()? getUserList,
+    TResult? Function()? nextPage,
     TResult? Function()? signOut,
   }) {
     return updateProfile?.call();
@@ -1430,6 +1530,8 @@ class _$UpdateProfileImpl implements _UpdateProfile {
     TResult Function(DropdownText province)? provinceChanged,
     TResult Function(ImageSource imageSource)? takePicture,
     TResult Function()? updateProfile,
+    TResult Function()? getUserList,
+    TResult Function()? nextPage,
     TResult Function()? signOut,
     required TResult orElse(),
   }) {
@@ -1450,6 +1552,8 @@ class _$UpdateProfileImpl implements _UpdateProfile {
     required TResult Function(_ProvinceChanged value) provinceChanged,
     required TResult Function(_TakePicture value) takePicture,
     required TResult Function(_UpdateProfile value) updateProfile,
+    required TResult Function(_GetUserList value) getUserList,
+    required TResult Function(_NextPage value) nextPage,
     required TResult Function(_SignOut value) signOut,
   }) {
     return updateProfile(this);
@@ -1466,6 +1570,8 @@ class _$UpdateProfileImpl implements _UpdateProfile {
     TResult? Function(_ProvinceChanged value)? provinceChanged,
     TResult? Function(_TakePicture value)? takePicture,
     TResult? Function(_UpdateProfile value)? updateProfile,
+    TResult? Function(_GetUserList value)? getUserList,
+    TResult? Function(_NextPage value)? nextPage,
     TResult? Function(_SignOut value)? signOut,
   }) {
     return updateProfile?.call(this);
@@ -1482,6 +1588,8 @@ class _$UpdateProfileImpl implements _UpdateProfile {
     TResult Function(_ProvinceChanged value)? provinceChanged,
     TResult Function(_TakePicture value)? takePicture,
     TResult Function(_UpdateProfile value)? updateProfile,
+    TResult Function(_GetUserList value)? getUserList,
+    TResult Function(_NextPage value)? nextPage,
     TResult Function(_SignOut value)? signOut,
     required TResult orElse(),
   }) {
@@ -1494,6 +1602,318 @@ class _$UpdateProfileImpl implements _UpdateProfile {
 
 abstract class _UpdateProfile implements AuthEvent {
   const factory _UpdateProfile() = _$UpdateProfileImpl;
+}
+
+/// @nodoc
+abstract class _$$GetUserListImplCopyWith<$Res> {
+  factory _$$GetUserListImplCopyWith(
+          _$GetUserListImpl value, $Res Function(_$GetUserListImpl) then) =
+      __$$GetUserListImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetUserListImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$GetUserListImpl>
+    implements _$$GetUserListImplCopyWith<$Res> {
+  __$$GetUserListImplCopyWithImpl(
+      _$GetUserListImpl _value, $Res Function(_$GetUserListImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetUserListImpl implements _GetUserList {
+  const _$GetUserListImpl();
+
+  @override
+  String toString() {
+    return 'AuthEvent.getUserList()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetUserListImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(User? user) patch,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(DropdownText gender) genderChanged,
+    required TResult Function(DateTime birthDate) birthDateChanged,
+    required TResult Function(DropdownText province) provinceChanged,
+    required TResult Function(ImageSource imageSource) takePicture,
+    required TResult Function() updateProfile,
+    required TResult Function() getUserList,
+    required TResult Function() nextPage,
+    required TResult Function() signOut,
+  }) {
+    return getUserList();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(User? user)? patch,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(DropdownText gender)? genderChanged,
+    TResult? Function(DateTime birthDate)? birthDateChanged,
+    TResult? Function(DropdownText province)? provinceChanged,
+    TResult? Function(ImageSource imageSource)? takePicture,
+    TResult? Function()? updateProfile,
+    TResult? Function()? getUserList,
+    TResult? Function()? nextPage,
+    TResult? Function()? signOut,
+  }) {
+    return getUserList?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(User? user)? patch,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(DropdownText gender)? genderChanged,
+    TResult Function(DateTime birthDate)? birthDateChanged,
+    TResult Function(DropdownText province)? provinceChanged,
+    TResult Function(ImageSource imageSource)? takePicture,
+    TResult Function()? updateProfile,
+    TResult Function()? getUserList,
+    TResult Function()? nextPage,
+    TResult Function()? signOut,
+    required TResult orElse(),
+  }) {
+    if (getUserList != null) {
+      return getUserList();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_Patch value) patch,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_GenderChanged value) genderChanged,
+    required TResult Function(_BirthDateChanged value) birthDateChanged,
+    required TResult Function(_ProvinceChanged value) provinceChanged,
+    required TResult Function(_TakePicture value) takePicture,
+    required TResult Function(_UpdateProfile value) updateProfile,
+    required TResult Function(_GetUserList value) getUserList,
+    required TResult Function(_NextPage value) nextPage,
+    required TResult Function(_SignOut value) signOut,
+  }) {
+    return getUserList(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_Patch value)? patch,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_GenderChanged value)? genderChanged,
+    TResult? Function(_BirthDateChanged value)? birthDateChanged,
+    TResult? Function(_ProvinceChanged value)? provinceChanged,
+    TResult? Function(_TakePicture value)? takePicture,
+    TResult? Function(_UpdateProfile value)? updateProfile,
+    TResult? Function(_GetUserList value)? getUserList,
+    TResult? Function(_NextPage value)? nextPage,
+    TResult? Function(_SignOut value)? signOut,
+  }) {
+    return getUserList?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_Patch value)? patch,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_GenderChanged value)? genderChanged,
+    TResult Function(_BirthDateChanged value)? birthDateChanged,
+    TResult Function(_ProvinceChanged value)? provinceChanged,
+    TResult Function(_TakePicture value)? takePicture,
+    TResult Function(_UpdateProfile value)? updateProfile,
+    TResult Function(_GetUserList value)? getUserList,
+    TResult Function(_NextPage value)? nextPage,
+    TResult Function(_SignOut value)? signOut,
+    required TResult orElse(),
+  }) {
+    if (getUserList != null) {
+      return getUserList(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetUserList implements AuthEvent {
+  const factory _GetUserList() = _$GetUserListImpl;
+}
+
+/// @nodoc
+abstract class _$$NextPageImplCopyWith<$Res> {
+  factory _$$NextPageImplCopyWith(
+          _$NextPageImpl value, $Res Function(_$NextPageImpl) then) =
+      __$$NextPageImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$NextPageImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$NextPageImpl>
+    implements _$$NextPageImplCopyWith<$Res> {
+  __$$NextPageImplCopyWithImpl(
+      _$NextPageImpl _value, $Res Function(_$NextPageImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$NextPageImpl implements _NextPage {
+  const _$NextPageImpl();
+
+  @override
+  String toString() {
+    return 'AuthEvent.nextPage()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$NextPageImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(User? user) patch,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(DropdownText gender) genderChanged,
+    required TResult Function(DateTime birthDate) birthDateChanged,
+    required TResult Function(DropdownText province) provinceChanged,
+    required TResult Function(ImageSource imageSource) takePicture,
+    required TResult Function() updateProfile,
+    required TResult Function() getUserList,
+    required TResult Function() nextPage,
+    required TResult Function() signOut,
+  }) {
+    return nextPage();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(User? user)? patch,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(DropdownText gender)? genderChanged,
+    TResult? Function(DateTime birthDate)? birthDateChanged,
+    TResult? Function(DropdownText province)? provinceChanged,
+    TResult? Function(ImageSource imageSource)? takePicture,
+    TResult? Function()? updateProfile,
+    TResult? Function()? getUserList,
+    TResult? Function()? nextPage,
+    TResult? Function()? signOut,
+  }) {
+    return nextPage?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(User? user)? patch,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(DropdownText gender)? genderChanged,
+    TResult Function(DateTime birthDate)? birthDateChanged,
+    TResult Function(DropdownText province)? provinceChanged,
+    TResult Function(ImageSource imageSource)? takePicture,
+    TResult Function()? updateProfile,
+    TResult Function()? getUserList,
+    TResult Function()? nextPage,
+    TResult Function()? signOut,
+    required TResult orElse(),
+  }) {
+    if (nextPage != null) {
+      return nextPage();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_Patch value) patch,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_GenderChanged value) genderChanged,
+    required TResult Function(_BirthDateChanged value) birthDateChanged,
+    required TResult Function(_ProvinceChanged value) provinceChanged,
+    required TResult Function(_TakePicture value) takePicture,
+    required TResult Function(_UpdateProfile value) updateProfile,
+    required TResult Function(_GetUserList value) getUserList,
+    required TResult Function(_NextPage value) nextPage,
+    required TResult Function(_SignOut value) signOut,
+  }) {
+    return nextPage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_Patch value)? patch,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_GenderChanged value)? genderChanged,
+    TResult? Function(_BirthDateChanged value)? birthDateChanged,
+    TResult? Function(_ProvinceChanged value)? provinceChanged,
+    TResult? Function(_TakePicture value)? takePicture,
+    TResult? Function(_UpdateProfile value)? updateProfile,
+    TResult? Function(_GetUserList value)? getUserList,
+    TResult? Function(_NextPage value)? nextPage,
+    TResult? Function(_SignOut value)? signOut,
+  }) {
+    return nextPage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_Patch value)? patch,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_GenderChanged value)? genderChanged,
+    TResult Function(_BirthDateChanged value)? birthDateChanged,
+    TResult Function(_ProvinceChanged value)? provinceChanged,
+    TResult Function(_TakePicture value)? takePicture,
+    TResult Function(_UpdateProfile value)? updateProfile,
+    TResult Function(_GetUserList value)? getUserList,
+    TResult Function(_NextPage value)? nextPage,
+    TResult Function(_SignOut value)? signOut,
+    required TResult orElse(),
+  }) {
+    if (nextPage != null) {
+      return nextPage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NextPage implements AuthEvent {
+  const factory _NextPage() = _$NextPageImpl;
 }
 
 /// @nodoc
@@ -1542,6 +1962,8 @@ class _$SignOutImpl implements _SignOut {
     required TResult Function(DropdownText province) provinceChanged,
     required TResult Function(ImageSource imageSource) takePicture,
     required TResult Function() updateProfile,
+    required TResult Function() getUserList,
+    required TResult Function() nextPage,
     required TResult Function() signOut,
   }) {
     return signOut();
@@ -1558,6 +1980,8 @@ class _$SignOutImpl implements _SignOut {
     TResult? Function(DropdownText province)? provinceChanged,
     TResult? Function(ImageSource imageSource)? takePicture,
     TResult? Function()? updateProfile,
+    TResult? Function()? getUserList,
+    TResult? Function()? nextPage,
     TResult? Function()? signOut,
   }) {
     return signOut?.call();
@@ -1574,6 +1998,8 @@ class _$SignOutImpl implements _SignOut {
     TResult Function(DropdownText province)? provinceChanged,
     TResult Function(ImageSource imageSource)? takePicture,
     TResult Function()? updateProfile,
+    TResult Function()? getUserList,
+    TResult Function()? nextPage,
     TResult Function()? signOut,
     required TResult orElse(),
   }) {
@@ -1594,6 +2020,8 @@ class _$SignOutImpl implements _SignOut {
     required TResult Function(_ProvinceChanged value) provinceChanged,
     required TResult Function(_TakePicture value) takePicture,
     required TResult Function(_UpdateProfile value) updateProfile,
+    required TResult Function(_GetUserList value) getUserList,
+    required TResult Function(_NextPage value) nextPage,
     required TResult Function(_SignOut value) signOut,
   }) {
     return signOut(this);
@@ -1610,6 +2038,8 @@ class _$SignOutImpl implements _SignOut {
     TResult? Function(_ProvinceChanged value)? provinceChanged,
     TResult? Function(_TakePicture value)? takePicture,
     TResult? Function(_UpdateProfile value)? updateProfile,
+    TResult? Function(_GetUserList value)? getUserList,
+    TResult? Function(_NextPage value)? nextPage,
     TResult? Function(_SignOut value)? signOut,
   }) {
     return signOut?.call(this);
@@ -1626,6 +2056,8 @@ class _$SignOutImpl implements _SignOut {
     TResult Function(_ProvinceChanged value)? provinceChanged,
     TResult Function(_TakePicture value)? takePicture,
     TResult Function(_UpdateProfile value)? updateProfile,
+    TResult Function(_GetUserList value)? getUserList,
+    TResult Function(_NextPage value)? nextPage,
     TResult Function(_SignOut value)? signOut,
     required TResult orElse(),
   }) {
@@ -1643,9 +2075,13 @@ abstract class _SignOut implements AuthEvent {
 /// @nodoc
 mixin _$AuthState {
   Option<User> get userOption => throw _privateConstructorUsedError;
+  Option<List<User>> get userListOption => throw _privateConstructorUsedError;
   Option<Either<AppFailure<AuthFailure>, AuthSuccess>>
       get failureOrSuccessOption => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
+  bool get isFetchItemLoading => throw _privateConstructorUsedError;
+  Option<String> get lastName => throw _privateConstructorUsedError;
+  bool get isLastPage => throw _privateConstructorUsedError;
   bool get isPhotoFromNetwork => throw _privateConstructorUsedError;
   ProfileForm get profileForm => throw _privateConstructorUsedError;
   Option<List<DropdownText>> get provinceListOption =>
@@ -1663,9 +2099,13 @@ abstract class $AuthStateCopyWith<$Res> {
   @useResult
   $Res call(
       {Option<User> userOption,
+      Option<List<User>> userListOption,
       Option<Either<AppFailure<AuthFailure>, AuthSuccess>>
           failureOrSuccessOption,
       bool isLoading,
+      bool isFetchItemLoading,
+      Option<String> lastName,
+      bool isLastPage,
       bool isPhotoFromNetwork,
       ProfileForm profileForm,
       Option<List<DropdownText>> provinceListOption});
@@ -1687,8 +2127,12 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
   @override
   $Res call({
     Object? userOption = null,
+    Object? userListOption = null,
     Object? failureOrSuccessOption = null,
     Object? isLoading = null,
+    Object? isFetchItemLoading = null,
+    Object? lastName = null,
+    Object? isLastPage = null,
     Object? isPhotoFromNetwork = null,
     Object? profileForm = null,
     Object? provinceListOption = null,
@@ -1698,6 +2142,10 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
           ? _value.userOption
           : userOption // ignore: cast_nullable_to_non_nullable
               as Option<User>,
+      userListOption: null == userListOption
+          ? _value.userListOption
+          : userListOption // ignore: cast_nullable_to_non_nullable
+              as Option<List<User>>,
       failureOrSuccessOption: null == failureOrSuccessOption
           ? _value.failureOrSuccessOption
           : failureOrSuccessOption // ignore: cast_nullable_to_non_nullable
@@ -1705,6 +2153,18 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
       isLoading: null == isLoading
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isFetchItemLoading: null == isFetchItemLoading
+          ? _value.isFetchItemLoading
+          : isFetchItemLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      lastName: null == lastName
+          ? _value.lastName
+          : lastName // ignore: cast_nullable_to_non_nullable
+              as Option<String>,
+      isLastPage: null == isLastPage
+          ? _value.isLastPage
+          : isLastPage // ignore: cast_nullable_to_non_nullable
               as bool,
       isPhotoFromNetwork: null == isPhotoFromNetwork
           ? _value.isPhotoFromNetwork
@@ -1740,9 +2200,13 @@ abstract class _$$AuthStateImplCopyWith<$Res>
   @useResult
   $Res call(
       {Option<User> userOption,
+      Option<List<User>> userListOption,
       Option<Either<AppFailure<AuthFailure>, AuthSuccess>>
           failureOrSuccessOption,
       bool isLoading,
+      bool isFetchItemLoading,
+      Option<String> lastName,
+      bool isLastPage,
       bool isPhotoFromNetwork,
       ProfileForm profileForm,
       Option<List<DropdownText>> provinceListOption});
@@ -1763,8 +2227,12 @@ class __$$AuthStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? userOption = null,
+    Object? userListOption = null,
     Object? failureOrSuccessOption = null,
     Object? isLoading = null,
+    Object? isFetchItemLoading = null,
+    Object? lastName = null,
+    Object? isLastPage = null,
     Object? isPhotoFromNetwork = null,
     Object? profileForm = null,
     Object? provinceListOption = null,
@@ -1774,6 +2242,10 @@ class __$$AuthStateImplCopyWithImpl<$Res>
           ? _value.userOption
           : userOption // ignore: cast_nullable_to_non_nullable
               as Option<User>,
+      userListOption: null == userListOption
+          ? _value.userListOption
+          : userListOption // ignore: cast_nullable_to_non_nullable
+              as Option<List<User>>,
       failureOrSuccessOption: null == failureOrSuccessOption
           ? _value.failureOrSuccessOption
           : failureOrSuccessOption // ignore: cast_nullable_to_non_nullable
@@ -1781,6 +2253,18 @@ class __$$AuthStateImplCopyWithImpl<$Res>
       isLoading: null == isLoading
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isFetchItemLoading: null == isFetchItemLoading
+          ? _value.isFetchItemLoading
+          : isFetchItemLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      lastName: null == lastName
+          ? _value.lastName
+          : lastName // ignore: cast_nullable_to_non_nullable
+              as Option<String>,
+      isLastPage: null == isLastPage
+          ? _value.isLastPage
+          : isLastPage // ignore: cast_nullable_to_non_nullable
               as bool,
       isPhotoFromNetwork: null == isPhotoFromNetwork
           ? _value.isPhotoFromNetwork
@@ -1803,8 +2287,12 @@ class __$$AuthStateImplCopyWithImpl<$Res>
 class _$AuthStateImpl extends _AuthState {
   const _$AuthStateImpl(
       {required this.userOption,
+      required this.userListOption,
       required this.failureOrSuccessOption,
       required this.isLoading,
+      required this.isFetchItemLoading,
+      required this.lastName,
+      required this.isLastPage,
       required this.isPhotoFromNetwork,
       required this.profileForm,
       required this.provinceListOption})
@@ -1813,10 +2301,18 @@ class _$AuthStateImpl extends _AuthState {
   @override
   final Option<User> userOption;
   @override
+  final Option<List<User>> userListOption;
+  @override
   final Option<Either<AppFailure<AuthFailure>, AuthSuccess>>
       failureOrSuccessOption;
   @override
   final bool isLoading;
+  @override
+  final bool isFetchItemLoading;
+  @override
+  final Option<String> lastName;
+  @override
+  final bool isLastPage;
   @override
   final bool isPhotoFromNetwork;
   @override
@@ -1826,7 +2322,7 @@ class _$AuthStateImpl extends _AuthState {
 
   @override
   String toString() {
-    return 'AuthState(userOption: $userOption, failureOrSuccessOption: $failureOrSuccessOption, isLoading: $isLoading, isPhotoFromNetwork: $isPhotoFromNetwork, profileForm: $profileForm, provinceListOption: $provinceListOption)';
+    return 'AuthState(userOption: $userOption, userListOption: $userListOption, failureOrSuccessOption: $failureOrSuccessOption, isLoading: $isLoading, isFetchItemLoading: $isFetchItemLoading, lastName: $lastName, isLastPage: $isLastPage, isPhotoFromNetwork: $isPhotoFromNetwork, profileForm: $profileForm, provinceListOption: $provinceListOption)';
   }
 
   @override
@@ -1836,10 +2332,18 @@ class _$AuthStateImpl extends _AuthState {
             other is _$AuthStateImpl &&
             (identical(other.userOption, userOption) ||
                 other.userOption == userOption) &&
+            (identical(other.userListOption, userListOption) ||
+                other.userListOption == userListOption) &&
             (identical(other.failureOrSuccessOption, failureOrSuccessOption) ||
                 other.failureOrSuccessOption == failureOrSuccessOption) &&
             (identical(other.isLoading, isLoading) ||
                 other.isLoading == isLoading) &&
+            (identical(other.isFetchItemLoading, isFetchItemLoading) ||
+                other.isFetchItemLoading == isFetchItemLoading) &&
+            (identical(other.lastName, lastName) ||
+                other.lastName == lastName) &&
+            (identical(other.isLastPage, isLastPage) ||
+                other.isLastPage == isLastPage) &&
             (identical(other.isPhotoFromNetwork, isPhotoFromNetwork) ||
                 other.isPhotoFromNetwork == isPhotoFromNetwork) &&
             (identical(other.profileForm, profileForm) ||
@@ -1852,8 +2356,12 @@ class _$AuthStateImpl extends _AuthState {
   int get hashCode => Object.hash(
       runtimeType,
       userOption,
+      userListOption,
       failureOrSuccessOption,
       isLoading,
+      isFetchItemLoading,
+      lastName,
+      isLastPage,
       isPhotoFromNetwork,
       profileForm,
       provinceListOption);
@@ -1868,9 +2376,13 @@ class _$AuthStateImpl extends _AuthState {
 abstract class _AuthState extends AuthState {
   const factory _AuthState(
           {required final Option<User> userOption,
+          required final Option<List<User>> userListOption,
           required final Option<Either<AppFailure<AuthFailure>, AuthSuccess>>
               failureOrSuccessOption,
           required final bool isLoading,
+          required final bool isFetchItemLoading,
+          required final Option<String> lastName,
+          required final bool isLastPage,
           required final bool isPhotoFromNetwork,
           required final ProfileForm profileForm,
           required final Option<List<DropdownText>> provinceListOption}) =
@@ -1880,10 +2392,18 @@ abstract class _AuthState extends AuthState {
   @override
   Option<User> get userOption;
   @override
+  Option<List<User>> get userListOption;
+  @override
   Option<Either<AppFailure<AuthFailure>, AuthSuccess>>
       get failureOrSuccessOption;
   @override
   bool get isLoading;
+  @override
+  bool get isFetchItemLoading;
+  @override
+  Option<String> get lastName;
+  @override
+  bool get isLastPage;
   @override
   bool get isPhotoFromNetwork;
   @override

@@ -127,6 +127,62 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       signOut: (event) async {
         await _authRepository.signOut();
       },
+      getUserList: (event) async {
+        emit(state.fetchItemLoading);
+
+        final failureOrUserList = await _authRepository.getUserList();
+        late List<User> userList;
+
+        failureOrUserList.fold((l) => null, (data) {
+          userList = data;
+        });
+
+        String? lastName;
+
+        if (userList.isNotEmpty) {
+          lastName = userList[userList.length - 1].name;
+        }
+
+        emit(
+          state.unmodified.copyWith(
+            userListOption: some(userList),
+            lastName: optionOf(lastName),
+            isLastPage: userList.isEmpty,
+          ),
+        );
+      },
+      nextPage: (event) async {
+        final failureOrUserList = await _authRepository.getUserList(
+          lastName: state.lastName.toNullable(),
+        );
+
+        final list = state.userList;
+
+        return failureOrUserList.fold(
+          (l) {
+            emit(state.unmodified.copyWith(
+              failureOrSuccessOption: some(
+                left(l),
+              ),
+            ));
+          },
+          (data) {
+            String? lastName;
+
+            if (data.isNotEmpty) {
+              lastName = data[data.length - 1].name;
+            }
+            list.addAll(data);
+            emit(
+              state.unmodified.copyWith(
+                userListOption: some(list),
+                lastName: optionOf(lastName),
+                isLastPage: data.isEmpty,
+              ),
+            );
+          },
+        );
+      },
     );
   }
 }

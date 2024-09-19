@@ -16,5 +16,7 @@ class AuthEvent with _$AuthEvent {
     ImageSource imageSource,
   ) = _TakePicture;
   const factory AuthEvent.updateProfile() = _UpdateProfile;
+  const factory AuthEvent.getUserList() = _GetUserList;
+  const factory AuthEvent.nextPage() = _NextPage;
   const factory AuthEvent.signOut() = _SignOut;
 }

@@ -19,6 +19,12 @@ abstract class IAuthRepository {
   Future<Either<AppFailure<AuthFailure>, AuthSuccess>> updateProfile(
       ProfileForm form);
   Future<Either<AppFailure<AuthFailure>, List<DropdownText>>> getProvinceList();
+  Future<Either<AppFailure<AuthFailure>, List<User>>> getUserList({
+    String? query,
+    int? limit = 10,
+    int? offset = 0,
+    String? lastName,
+  });
   Future<Either<AppFailure<AuthFailure>, String?>> takePicture(
       ImageSource imageSource);
   Future<void> signOut();

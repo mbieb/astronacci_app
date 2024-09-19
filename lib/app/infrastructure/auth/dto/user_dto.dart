@@ -1,4 +1,5 @@
 import 'package:astronacci_app/app/domain/user/user.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'user_dto.freezed.dart';
 part 'user_dto.g.dart';
@@ -34,4 +35,20 @@ class UserDto with _$UserDto {
         provinceId: provinceId,
         imgUrl: imgUrl,
       );
+
+  factory UserDto.fromFirestore(DocumentSnapshot doc) {
+    Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
+
+    return UserDto(
+      id: doc.id, // Document ID
+      name: data['fullName'] ?? '',
+      gender: data['gender'] ?? '',
+      genderId: data['genderId'] ?? '',
+      birthDate: data['birthdate'] ?? '',
+      email: data['email'] ?? '',
+      imgUrl: data['imageUrl'] ?? '',
+      province: data['province'] ?? '',
+      provinceId: data['provinceId'] ?? '',
+    );
+  }
 }

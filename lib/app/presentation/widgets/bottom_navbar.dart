@@ -16,6 +16,7 @@ class _BottomNavigationBar extends StatelessWidget {
         return BottomAppBar(
           shape: const CircularNotchedRectangle(),
           notchMargin: 6,
+          padding: const EdgeInsets.all(0),
           child: Container(
             decoration: const BoxDecoration(
               color: cColorGrey,
@@ -66,30 +67,24 @@ class _BottomNavbarItem extends StatelessWidget {
     ThemeData themeData = Theme.of(context);
     return InkWell(
       onTap: onPressed,
-      child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 12),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(
-              isActive ? activeIcon : icon,
-              color: isActive
-                  ? themeData.primaryColor
-                  : themeData.colorScheme.onBackground,
-            ),
-            isActive
-                ? Container(
-                    margin: const EdgeInsets.only(top: 4),
-                    decoration: BoxDecoration(
-                        color: themeData.primaryColor,
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(2.5))),
-                    height: 5,
-                    width: 5,
-                  )
-                : const SizedBox.shrink()
-          ],
-        ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(
+            isActive ? activeIcon : icon,
+            color: isActive ? Colors.blue : themeData.colorScheme.onBackground,
+          ),
+          isActive
+              ? Container(
+                  margin: const EdgeInsets.only(top: 4),
+                  decoration: const BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.all(Radius.circular(2.5))),
+                  height: 5,
+                  width: 5,
+                )
+              : const SizedBox.shrink()
+        ],
       ),
     );
   }
