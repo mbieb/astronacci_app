@@ -30,6 +30,10 @@ Astronaccci app adalah aplikasi yang dibangun dengan flutter framework. Aplikasi
 
 * Edit Profile
 
+* Take Image from Camera & Gallery
+
+* Crop Image
+
 * Error Handle
  -App Error
  -Network Error
@@ -64,6 +68,8 @@ Astronaccci app adalah aplikasi yang dibangun dengan flutter framework. Aplikasi
 * hive: Digunakan untuk local data persistence.
 
 * image_picker: Digunakan untuk mengambil foto dari Galeri dan Kamera.
+
+*image_cropper: utuk crop image.
 
 * injectable: Digunakan untuk dependency injection.
 

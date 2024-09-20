@@ -8,6 +8,8 @@ import 'package:astronacci_app/app/infrastructure/api_helper/api_helper.dart';
 import 'package:astronacci_app/app/infrastructure/api_helper/api_path.dart';
 import 'package:astronacci_app/app/infrastructure/auth/dto/province_dto.dart';
 import 'package:astronacci_app/app/infrastructure/auth/dto/user_dto.dart';
+import 'package:flutter/material.dart';
+import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:injectable/injectable.dart';
 import 'package:intl/intl.dart';
@@ -164,14 +166,40 @@ class AuthRemoteDataSource {
   Future<String?> takePicture({
     required ImageSource imageSource,
   }) async {
-    XFile? image =
+    XFile? pickedImage =
         await _imagePicker.pickImage(source: imageSource, imageQuality: 50);
 
-    if (image == null) {
+    if (pickedImage == null) {
+      return null;
+    } else {
+      // Memotong gambar
+      final croppedImage = await ImageCropper().cropImage(
+        sourcePath: pickedImage.path,
+        uiSettings: [
+          AndroidUiSettings(
+            toolbarTitle: 'Cropper',
+            toolbarColor: Colors.deepOrange,
+            toolbarWidgetColor: Colors.white,
+            aspectRatioPresets: [
+              CropAspectRatioPreset.original,
+              CropAspectRatioPreset.square,
+            ],
+          ),
+          IOSUiSettings(
+            title: 'Cropper',
+            aspectRatioPresets: [
+              CropAspectRatioPreset.original,
+              CropAspectRatioPreset.square,
+            ],
+          ),
+        ],
+      );
+
+      if (croppedImage != null) {
+        return croppedImage.path;
+      }
       return null;
     }
-
-    return image.path;
   }
 
   Future<List<UserDto>> getUserList({
