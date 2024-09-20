@@ -16,6 +16,7 @@ import 'package:injectable/injectable.dart' as _i526;
 import 'package:logger/logger.dart' as _i974;
 
 import '../app/application/auth/auth_bloc.dart' as _i51;
+import '../app/application/forgot_password/forgot_password_bloc.dart' as _i253;
 import '../app/application/initial/initial_bloc.dart' as _i871;
 import '../app/application/register/register_bloc.dart' as _i1033;
 import '../app/application/sign_in/sign_in_bloc.dart' as _i779;
@@ -65,6 +66,8 @@ _i174.GetIt init(
       () => _i1033.RegisterBloc(gh<_i971.IAuthRepository>()));
   gh.factory<_i779.SignInBloc>(
       () => _i779.SignInBloc(gh<_i971.IAuthRepository>()));
+  gh.factory<_i253.ForgotPasswordBloc>(
+      () => _i253.ForgotPasswordBloc(gh<_i971.IAuthRepository>()));
   return getIt;
 }
 

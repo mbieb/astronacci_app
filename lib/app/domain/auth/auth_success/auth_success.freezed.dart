@@ -20,18 +20,21 @@ mixin _$AuthSuccess {
   TResult when<TResult extends Object?>({
     required TResult Function(User user) success,
     required TResult Function() takePhotoSuccess,
+    required TResult Function() forgotSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(User user)? success,
     TResult? Function()? takePhotoSuccess,
+    TResult? Function()? forgotSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(User user)? success,
     TResult Function()? takePhotoSuccess,
+    TResult Function()? forgotSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +42,21 @@ mixin _$AuthSuccess {
   TResult map<TResult extends Object?>({
     required TResult Function(_Success value) success,
     required TResult Function(_UpdateProfileSuccess value) takePhotoSuccess,
+    required TResult Function(_ForgotSuccess value) forgotSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Success value)? success,
     TResult? Function(_UpdateProfileSuccess value)? takePhotoSuccess,
+    TResult? Function(_ForgotSuccess value)? forgotSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Success value)? success,
     TResult Function(_UpdateProfileSuccess value)? takePhotoSuccess,
+    TResult Function(_ForgotSuccess value)? forgotSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -150,6 +156,7 @@ class _$SuccessImpl implements _Success {
   TResult when<TResult extends Object?>({
     required TResult Function(User user) success,
     required TResult Function() takePhotoSuccess,
+    required TResult Function() forgotSuccess,
   }) {
     return success(user);
   }
@@ -159,6 +166,7 @@ class _$SuccessImpl implements _Success {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(User user)? success,
     TResult? Function()? takePhotoSuccess,
+    TResult? Function()? forgotSuccess,
   }) {
     return success?.call(user);
   }
@@ -168,6 +176,7 @@ class _$SuccessImpl implements _Success {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(User user)? success,
     TResult Function()? takePhotoSuccess,
+    TResult Function()? forgotSuccess,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -181,6 +190,7 @@ class _$SuccessImpl implements _Success {
   TResult map<TResult extends Object?>({
     required TResult Function(_Success value) success,
     required TResult Function(_UpdateProfileSuccess value) takePhotoSuccess,
+    required TResult Function(_ForgotSuccess value) forgotSuccess,
   }) {
     return success(this);
   }
@@ -190,6 +200,7 @@ class _$SuccessImpl implements _Success {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Success value)? success,
     TResult? Function(_UpdateProfileSuccess value)? takePhotoSuccess,
+    TResult? Function(_ForgotSuccess value)? forgotSuccess,
   }) {
     return success?.call(this);
   }
@@ -199,6 +210,7 @@ class _$SuccessImpl implements _Success {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Success value)? success,
     TResult Function(_UpdateProfileSuccess value)? takePhotoSuccess,
+    TResult Function(_ForgotSuccess value)? forgotSuccess,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -258,6 +270,7 @@ class _$UpdateProfileSuccessImpl implements _UpdateProfileSuccess {
   TResult when<TResult extends Object?>({
     required TResult Function(User user) success,
     required TResult Function() takePhotoSuccess,
+    required TResult Function() forgotSuccess,
   }) {
     return takePhotoSuccess();
   }
@@ -267,6 +280,7 @@ class _$UpdateProfileSuccessImpl implements _UpdateProfileSuccess {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(User user)? success,
     TResult? Function()? takePhotoSuccess,
+    TResult? Function()? forgotSuccess,
   }) {
     return takePhotoSuccess?.call();
   }
@@ -276,6 +290,7 @@ class _$UpdateProfileSuccessImpl implements _UpdateProfileSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(User user)? success,
     TResult Function()? takePhotoSuccess,
+    TResult Function()? forgotSuccess,
     required TResult orElse(),
   }) {
     if (takePhotoSuccess != null) {
@@ -289,6 +304,7 @@ class _$UpdateProfileSuccessImpl implements _UpdateProfileSuccess {
   TResult map<TResult extends Object?>({
     required TResult Function(_Success value) success,
     required TResult Function(_UpdateProfileSuccess value) takePhotoSuccess,
+    required TResult Function(_ForgotSuccess value) forgotSuccess,
   }) {
     return takePhotoSuccess(this);
   }
@@ -298,6 +314,7 @@ class _$UpdateProfileSuccessImpl implements _UpdateProfileSuccess {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Success value)? success,
     TResult? Function(_UpdateProfileSuccess value)? takePhotoSuccess,
+    TResult? Function(_ForgotSuccess value)? forgotSuccess,
   }) {
     return takePhotoSuccess?.call(this);
   }
@@ -307,6 +324,7 @@ class _$UpdateProfileSuccessImpl implements _UpdateProfileSuccess {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Success value)? success,
     TResult Function(_UpdateProfileSuccess value)? takePhotoSuccess,
+    TResult Function(_ForgotSuccess value)? forgotSuccess,
     required TResult orElse(),
   }) {
     if (takePhotoSuccess != null) {
@@ -318,4 +336,112 @@ class _$UpdateProfileSuccessImpl implements _UpdateProfileSuccess {
 
 abstract class _UpdateProfileSuccess implements AuthSuccess {
   const factory _UpdateProfileSuccess() = _$UpdateProfileSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$ForgotSuccessImplCopyWith<$Res> {
+  factory _$$ForgotSuccessImplCopyWith(
+          _$ForgotSuccessImpl value, $Res Function(_$ForgotSuccessImpl) then) =
+      __$$ForgotSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ForgotSuccessImplCopyWithImpl<$Res>
+    extends _$AuthSuccessCopyWithImpl<$Res, _$ForgotSuccessImpl>
+    implements _$$ForgotSuccessImplCopyWith<$Res> {
+  __$$ForgotSuccessImplCopyWithImpl(
+      _$ForgotSuccessImpl _value, $Res Function(_$ForgotSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ForgotSuccessImpl implements _ForgotSuccess {
+  const _$ForgotSuccessImpl();
+
+  @override
+  String toString() {
+    return 'AuthSuccess.forgotSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$ForgotSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(User user) success,
+    required TResult Function() takePhotoSuccess,
+    required TResult Function() forgotSuccess,
+  }) {
+    return forgotSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(User user)? success,
+    TResult? Function()? takePhotoSuccess,
+    TResult? Function()? forgotSuccess,
+  }) {
+    return forgotSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(User user)? success,
+    TResult Function()? takePhotoSuccess,
+    TResult Function()? forgotSuccess,
+    required TResult orElse(),
+  }) {
+    if (forgotSuccess != null) {
+      return forgotSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Success value) success,
+    required TResult Function(_UpdateProfileSuccess value) takePhotoSuccess,
+    required TResult Function(_ForgotSuccess value) forgotSuccess,
+  }) {
+    return forgotSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Success value)? success,
+    TResult? Function(_UpdateProfileSuccess value)? takePhotoSuccess,
+    TResult? Function(_ForgotSuccess value)? forgotSuccess,
+  }) {
+    return forgotSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Success value)? success,
+    TResult Function(_UpdateProfileSuccess value)? takePhotoSuccess,
+    TResult Function(_ForgotSuccess value)? forgotSuccess,
+    required TResult orElse(),
+  }) {
+    if (forgotSuccess != null) {
+      return forgotSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ForgotSuccess implements AuthSuccess {
+  const factory _ForgotSuccess() = _$ForgotSuccessImpl;
 }

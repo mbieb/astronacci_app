@@ -1,4 +1,5 @@
 import 'package:astronacci_app/app/presentation/app.dart';
+import 'package:astronacci_app/app/presentation/pages/forgot_password/forgot_password_page.dart';
 import 'package:astronacci_app/app/presentation/pages/home/home_page.dart';
 import 'package:astronacci_app/app/presentation/pages/profile/edit_profile_page.dart';
 import 'package:astronacci_app/app/presentation/pages/profile/profile_page.dart';
@@ -18,6 +19,7 @@ class AppRouter {
   static const String home = '/home';
   static const String profile = '/profile';
   static const String editProfile = '/profile/edit';
+  static const String forgotPassword = '/forgot-password';
 
   static final GoRouter _router = GoRouter(
     initialLocation: splashPage,
@@ -49,6 +51,10 @@ class AppRouter {
       GoRoute(
         path: editProfile,
         builder: (context, state) => const EditProfilePage(),
+      ),
+      GoRoute(
+        path: forgotPassword,
+        builder: (context, state) => const ForgotPasswordPage(),
       ),
     ],
   );

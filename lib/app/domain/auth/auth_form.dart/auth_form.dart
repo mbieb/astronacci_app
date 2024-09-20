@@ -155,3 +155,19 @@ class ProfileForm with _$ProfileForm {
 
   String get imageUrlValue => imageUrl.fold(() => '', (val) => val);
 }
+
+@freezed
+class ForgotPasswordForm with _$ForgotPasswordForm {
+  const ForgotPasswordForm._();
+  const factory ForgotPasswordForm({
+    required EmailAddress email,
+  }) = _ForgotPasswordForm;
+
+  Option<ValueFailure> get failureOption {
+    return email.failureOrUnit.fold((f) => some(f), (_) => none());
+  }
+
+  factory ForgotPasswordForm.init() => const ForgotPasswordForm(
+        email: EmailAddress(''),
+      );
+}

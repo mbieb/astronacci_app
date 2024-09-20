@@ -171,4 +171,16 @@ class AuthRepository implements IAuthRepository {
       return left(dynamicErrorToFailure(e, stack));
     }
   }
+
+  @override
+  Future<Either<AppFailure<AuthFailure>, AuthSuccess>> forgotPassword(
+      String email) async {
+    try {
+      await _authRemoteDataSource.forgotPassword(email: email);
+
+      return right(const AuthSuccess.forgotSuccess());
+    } catch (e, stack) {
+      return left(dynamicErrorToFailure(e, stack));
+    }
+  }
 }

@@ -206,4 +206,13 @@ class AuthRemoteDataSource {
 
     return userList;
   }
+
+  Future forgotPassword({
+    required String email,
+  }) async {
+    final auth = FirebaseAuth.instance;
+    await auth.sendPasswordResetEmail(
+      email: email,
+    );
+  }
 }

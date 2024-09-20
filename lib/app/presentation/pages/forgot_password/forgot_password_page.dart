@@ -1,43 +1,38 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:astronacci_app/app/application/auth/auth_bloc.dart';
-import 'package:astronacci_app/app/application/sign_in/sign_in_bloc.dart';
+import 'package:astronacci_app/app/application/forgot_password/forgot_password_bloc.dart';
 import 'package:astronacci_app/app/presentation/constants/dimens.dart';
 import 'package:astronacci_app/app/presentation/constants/text_style.dart';
 import 'package:astronacci_app/app/presentation/helpers/failure_helper.dart';
 import 'package:astronacci_app/app/presentation/helpers/ui_helper.dart';
-import 'package:astronacci_app/app/presentation/router.dart';
 import 'package:astronacci_app/app/presentation/widgets/alert.dart';
 import 'package:astronacci_app/app/presentation/widgets/app_scaffold.dart';
 import 'package:astronacci_app/app/presentation/widgets/button/primary_button.dart';
 import 'package:astronacci_app/app/presentation/widgets/text_field.dart';
 import 'package:astronacci_app/config/injection.dart';
 import 'package:astronacci_app/generated/l10n.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-part './widgets/form.dart';
-
-class SignInPage extends StatelessWidget {
-  const SignInPage({super.key});
+class ForgotPasswordPage extends StatelessWidget {
+  const ForgotPasswordPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) =>
-          getIt<SignInBloc>()..add(const SignInEvent.started()),
-      child: const _SignInBodyPage(),
+      create: (context) => getIt<ForgotPasswordBloc>(),
+      child: const _ForgotPasswordBodyPage(),
     );
   }
 }
 
-class _SignInBodyPage extends StatelessWidget {
-  const _SignInBodyPage();
+class _ForgotPasswordBodyPage extends StatelessWidget {
+  const _ForgotPasswordBodyPage();
 
   @override
   Widget build(BuildContext context) {
     I10n i10n = I10n.of(context);
-    return BlocConsumer<SignInBloc, SignInState>(
+    return BlocConsumer<ForgotPasswordBloc, ForgotPasswordState>(
       listener: (context, state) {
         state.failureOrSuccessOption.fold(
           () {},
@@ -55,11 +50,11 @@ class _SignInBodyPage extends StatelessWidget {
               (success) {
                 success.maybeWhen(
                   orElse: () {},
-                  success: (user) {
-                    context.read<AuthBloc>().add(
-                          AuthEvent.patch(user: user),
-                        );
-                    context.go(AppRouter.main);
+                  success: (user) {},
+                  forgotSuccess: () {
+                    context.pop();
+                    Alert.notify(context, i10n.alertSuccess,
+                        'A password reset link has been sent to your email');
                   },
                 );
               },
@@ -68,6 +63,7 @@ class _SignInBodyPage extends StatelessWidget {
         );
       },
       builder: (context, state) {
+        final bloc = context.read<ForgotPasswordBloc>();
         return AppScaffold(
           isLoading: state.isLoading,
           body: Center(
@@ -81,20 +77,43 @@ class _SignInBodyPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      i10n.signIn,
+                      'Forgot Password',
                       style: cTextBold2XL,
                     ),
                     gapH16,
-                    _Form(state),
+                    PrimaryTextField(
+                      onChanged: (val) =>
+                          bloc.add(ForgotPasswordEvent.emailChanged(val)),
+                      error: state.emailFieldErrorToString,
+                      keyboardType: TextInputType.emailAddress,
+                      hintText: i10n.email,
+                      textInputAction: TextInputAction.next,
+                      prefixIcon: const Icon(
+                        Icons.email_outlined,
+                        size: 22,
+                      ),
+                      inputFormatters: [
+                        FilteringTextInputFormatter.singleLineFormatter,
+                        FilteringTextInputFormatter.deny(' '),
+                      ],
+                    ),
+                    PrimaryButton(
+                      onPressed: state.enableSignInButton
+                          ? () {
+                              bloc.add(const ForgotPasswordEvent.submit());
+                            }
+                          : null,
+                      text: 'Submit',
+                    ),
                     gapH16,
                     InkWell(
                       onTap: () {
-                        context.push(AppRouter.forgotPassword);
+                        context.pop();
                       },
                       child: Container(
                         alignment: Alignment.centerRight,
                         child: Text(
-                          'Forgot Password?',
+                          'Back to Login?',
                           style: cTextReg.copyWith(
                             fontStyle: FontStyle.italic,
                             decoration: TextDecoration.underline,

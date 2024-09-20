@@ -27,5 +27,7 @@ abstract class IAuthRepository {
   });
   Future<Either<AppFailure<AuthFailure>, String?>> takePicture(
       ImageSource imageSource);
+  Future<Either<AppFailure<AuthFailure>, AuthSuccess>> forgotPassword(
+      String email);
   Future<void> signOut();
 }

@@ -7,4 +7,5 @@ part 'auth_success.freezed.dart';
 class AuthSuccess with _$AuthSuccess {
   const factory AuthSuccess.success(User user) = _Success;
   const factory AuthSuccess.takePhotoSuccess() = _UpdateProfileSuccess;
+  const factory AuthSuccess.forgotSuccess() = _ForgotSuccess;
 }
