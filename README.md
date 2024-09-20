@@ -69,7 +69,7 @@ Astronaccci app adalah aplikasi yang dibangun dengan flutter framework. Aplikasi
 
 * image_picker: Digunakan untuk mengambil foto dari Galeri dan Kamera.
 
-*image_cropper: utuk crop image.
+* image_cropper: utuk crop image.
 
 * injectable: Digunakan untuk dependency injection.
 
